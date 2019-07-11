@@ -1,0 +1,58 @@
+/**
+ * Tab Snooze
+ *
+ * manifest.json
+ * Athyuttam Reddy Eleti
+ * @athyuttamre
+ */
+
+{
+  "manifest_version": 2,
+  "name": "Tab Snooze",
+  "version": "0.2",
+
+  "description": "Snooze tabs for later.",
+  "icons": {},
+
+  /* Popup on clicking extension icon */
+  "browser_action": {
+    "default_icon": "assets/icons/browserAction.png",
+    "default_popup": "popup/popup.html"
+  },
+
+  /* Core functionality */
+  "background": {
+    "persistent": true,
+    "scripts": ["background.js"]
+  },
+
+  /* Extension options */
+  "options_page": "options/index.html",
+
+  /* User permissions */
+  "permissions": [
+    "tabs",
+    "alarms",
+    "storage",
+    "notifications",
+    "downloads"
+  ],
+
+  "web_accessible_resources": [
+    "options/index.html",
+    "manifest.json",
+    "assets/*"
+  ],
+
+  /* Keyboard shortcuts */
+  "commands": {
+    "_execute_browser_action": {
+      "suggested_key": {
+        "default": "Alt+Shift+S"
+      }
+    }
+  },
+
+  "author": "@athyuttamre",
+  "homepage_url": "http://athyuttamreddy.com/tab-snooze/"
+}
